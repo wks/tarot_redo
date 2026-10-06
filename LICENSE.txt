@@ -1,0 +1,17 @@
+The code is originally written by Alexsandro Percy (APercy),
+with modifications from Kunshan Wang (wks),
+and is released under the MIT license.
+
+The original Rider-Waite-Smith Tarot deck is now in the public domain.
+Cards textures were obtained from https://luciellaes.itch.io/rider-waite-smith-tarot-cards-cc0
+
+The Tarot card back textures:
+
+-   tarot_redo_card_ico.png
+-   tarot_redo_CardBacks.jpg
+
+are created by Alexsandro Percy,
+and are dedicated to the public domain using CC0.
+
+The Tarot Book texture is modified from the Book from Minetest Game,
+licensed under CC BY-SA 3.0.
