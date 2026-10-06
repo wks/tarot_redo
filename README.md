@@ -4,6 +4,8 @@ This mod adds Tarot Cards in Luanti games.
 Players can craft Tarot Cards, draw cards at random, and place cards on surfaces.
 A Tarot Book item is also provided as a reference manual for the Tarot Cards.
 
+![(Screenshot of all cards)](screenshots/screenshot-allcards.webp)
+
 This mod uses the famous Rider-Waite-Smith Tarot deck.
 
 It is a fork of [APercy]'s [Tarot mod].
@@ -93,6 +95,8 @@ the mod will consider the lower card as a 1x1 "table".
 You may get card that is the same as another card on the actual "table".
 One workaround is placing the card on the table first when drawing,
 and then dig it with hand or sword, and place it on top of another card.
+
+![(Screenshot of Celtic Cross spread)](screenshots/screenshot-celticcross.webp)
 
 ## The Tarot Book
 
