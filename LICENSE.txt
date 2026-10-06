@@ -15,3 +15,8 @@ and are dedicated to the public domain using CC0.
 
 The Tarot Book texture is modified from the Book from Minetest Game,
 licensed under CC BY-SA 3.0.
+
+The Tarot meanings were obtained from the following address by GTTgirl,
+and were adjusted by Alexsandro Percy:
+
+https://www.reddit.com/r/tarot/comments/n8u6rs/link_to_tarot_meaning_spreadsheet_as_requested/
