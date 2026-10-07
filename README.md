@@ -80,7 +80,7 @@ and highlight the area where the mod looks for duplications.
 
 So if you want to do Tarot card reading,
 it is recommended to first craft a table with your favorite material,
-and make sure it is enough for your intended spread.
+and make sure it is large enough for your intended spread.
 
 ### Special notes for overlapping cards
 
@@ -129,7 +129,7 @@ and show their meanings.
 ## Server-side settings
 
 The server can set the **de-duplication radius**,
-i.e. the Chebyshev distance to search for duplicated cards from the newly placed card.
+i.e. the Chebyshev distance (max difference in X, Y and Z axes) to search for duplicated cards from the newly placed card.
 Increasing the radius will allow larger tables,
 but also increases the CPU usage when drawing a card.
 
@@ -149,3 +149,4 @@ Original mod developed by Alexsandro Percy (APercy).
 
 Maintained by Kunshan Wang (wks).
 
+Repository: https://github.com/wks/tarot/
