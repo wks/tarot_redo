@@ -23,6 +23,25 @@ The main differences are:
 [APercy]: https://content.luanti.org/users/apercy/
 [Tarot mod]: https://content.luanti.org/packages/apercy/tarot/
 
+# Supported games and mods
+
+This mod in theory works with any game in Luanti.
+For now, crafting recipies are provided for [Minetest Game], [Mineclonia] and [VoxeLibre].
+In other games, the player can still use the `/giveme` chat command to acquire
+the Tarot Cards (`tarot_redo:tarot_card`) and the Tarot Book (`tarot_redo:tarot_book`).
+If the game supports creative mode (e.g. [Age of Mending] and [Backrooms Test]),
+you can get the items directly from the item list.
+
+If the [Extended Tooltips: Base] mod is installed,
+additional tooltips can be displayed for items in this mod.
+
+[Minetest Game]: https://content.luanti.org/packages/Luanti/minetest_game/
+[Mineclonia]: https://content.luanti.org/packages/ryvnf/mineclonia/
+[VoxeLibre]: https://content.luanti.org/packages/Wuzzy/mineclone2/
+[Age of Mending]: https://content.luanti.org/packages/Sumianvoice/pmb_core/
+[Backrooms Test]: https://content.luanti.org/packages/Sumianvoice/backroomtest/
+[Extended Tooltips: Base]: https://content.luanti.org/packages/Wuzzy/tt_base/
+
 # How to use
 
 ## Crafting the Tarot Cards
@@ -39,12 +58,8 @@ Mineclonia and VoxeLibre give some dyes different names:
 
 | Minetest Game | Mineclonia   | VoxeLibre  |
 |---------------|--------------|------------|
-| Red Dye       | Red Dye      | Red Dye    |
-| Yellow Dye    | Yellow Dye   | Yellow Dye |
 | Green Dye     | Green Dye    | *Lime Dye* |
-| Blue Dye      | Blue Dye     | Blue Dye   |
 | Violet Dye    | *Purple Dye* | Violet Dye |
-| Black Dye     | Black Dye    | Black Dye  |
 
 ## Drawing and placing Tarot Cards
 
