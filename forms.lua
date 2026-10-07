@@ -1,6 +1,9 @@
 local modname = core.get_current_modname()
 local S = core.get_translator(modname)
 
+-- Default spacing for HBox and VBox.  See flow/layout.lua
+local DEFAULT_SPACING = 0.2
+
 local gui = flow.widgets
 
 local my_gui = flow.make_gui(function(player, ctx)
@@ -91,10 +94,8 @@ function tarot_redo.populate_suit_page(player, cat_entry, right_pane_def)
         table.insert(cur_row, card)
     end
 
-    -- Default spacing for HBox and VBox.
-    local default_spacing = 0.2
     -- (cards_per_row - 1) gaps between cards, plus two gaps on each side.
-    local available_width = right_pane_def.min_w - default_spacing * (cards_per_row + 1)
+    local available_width = right_pane_def.min_w - DEFAULT_SPACING * (cards_per_row + 1)
     local card_w = available_width / cards_per_row
     local card_h = card_w / 300 * 527 -- Keep the aspect ratio
 
@@ -136,8 +137,11 @@ function tarot_redo.populate_card_page(player, ctx, right_pane_def)
         return
     end
 
-    local card_w = right_pane_def.min_w / 3
+    local available_width = right_pane_def.min_w - DEFAULT_SPACING * 2
+    local card_w = available_width / 3
     local card_h = card_w / 300 * 527 -- Keep the aspect ratio
+
+    local rest_w = available_width - card_w - DEFAULT_SPACING
 
     local card_image = gui.Image {
         texture_name = card.image,
@@ -146,32 +150,27 @@ function tarot_redo.populate_card_page(player, ctx, right_pane_def)
     }
 
     local description_rows = {
+        expand = true,
     }
 
-    local rest_w = right_pane_def.min_w - card_w
-
     table.insert(description_rows, gui.Label {
-        w = rest_w,
         label = card.title,
     })
 
     table.insert(description_rows, gui.Label {
-        w = rest_w,
         label = S("Suit: @1", tarot_redo.catalog[card.suit].title)
     })
 
     table.insert(description_rows, gui.Label {
-        w = rest_w,
         label = S("Meanings:")
     })
 
-    table.insert(description_rows, gui.Label {
+    table.insert(description_rows, gui.Textarea {
         w = rest_w,
-        label = card.meaning,
+        default = card.meaning,
     })
 
     table.insert(description_rows, gui.Label {
-        w = rest_w,
         label = S("Answer: @1", card.answer)
     })
 
