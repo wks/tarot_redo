@@ -44,6 +44,8 @@ function tarot_redo.make_tab_bar(player, ctx)
         })
     end
 
+    table.insert(tab_bar_def, gui.Spacer {})
+
     table.insert(tab_bar_def, gui.Button {
         label = S("Settings"),
         on_event = function(player2, ctx2)
@@ -89,7 +91,11 @@ function tarot_redo.populate_suit_page(player, cat_entry, right_pane_def)
         table.insert(cur_row, card)
     end
 
-    local card_w = right_pane_def.min_w / cards_per_row
+    -- Default spacing for HBox and VBox.
+    local default_spacing = 0.2
+    -- (cards_per_row - 1) gaps between cards, plus two gaps on each side.
+    local available_width = right_pane_def.min_w - default_spacing * (cards_per_row + 1)
+    local card_w = available_width / cards_per_row
     local card_h = card_w / 300 * 527 -- Keep the aspect ratio
 
     for _, row in ipairs(rows) do
@@ -195,6 +201,7 @@ function tarot_redo.populate_settings_page(player, ctx, right_pane_def)
             core.debug("control:", check_control, "selected:", selected)
         end
         table.insert(vbox_def, gui.HBox {
+            expand = true,
             gui.Checkbox {
                 name = check_control,
                 label = setting.title,
@@ -207,6 +214,7 @@ function tarot_redo.populate_settings_page(player, ctx, right_pane_def)
                     setting:set(player2, selected2)
                 end,
             },
+            gui.Spacer {},
             gui.ImageButton {
                 w = 0.5, h = 0.5,
                 align_h = "right",
