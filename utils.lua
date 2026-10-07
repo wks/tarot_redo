@@ -1,4 +1,3 @@
-
 local function is_on_rightclick_suppressed(player)
     if not player or not player:is_player() then return false end
     local control = player:get_player_control()
