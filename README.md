@@ -27,13 +27,24 @@ The main differences are:
 
 ## Crafting the Tarot Cards
 
-You can craft a deck of 78 Tarot Cards using the following recipe:
+In Minetest Game, you can craft a deck of 78 Tarot Cards using the following recipe:
 
 ```
 Red Dye    | Green Dye | Paper
 Yellow Dye | Paper     | Black Dye
 Paper      | Blue Dye  | Violet Dye
 ```
+
+Mineclonia and VoxeLibre give some dyes different names:
+
+| Minetest Game | Mineclonia   | VoxeLibre  |
+|---------------|--------------|------------|
+| Red Dye       | Red Dye      | Red Dye    |
+| Yellow Dye    | Yellow Dye   | Yellow Dye |
+| Green Dye     | Green Dye    | *Lime Dye* |
+| Blue Dye      | Blue Dye     | Blue Dye   |
+| Violet Dye    | *Purple Dye* | Violet Dye |
+| Black Dye     | Black Dye    | Black Dye  |
 
 ## Drawing and placing Tarot Cards
 
@@ -100,13 +111,15 @@ and then dig it with hand or sword, and place it on top of another card.
 
 ## The Tarot Book
 
-You can craft a Tarot Book using the following recipe:
+In Minetest Game, you can craft a Tarot Book using the following recipe:
 
 ```
 Red Dye    | Green Dye |
 Yellow Dye | Book      | Black Dye
            | Blue Dye  | Violet Dye
 ```
+
+In Mineclonia and VoxeLibre, refer to the table in the *Crafting the Tarot Cards* section.
 
 ### Highlighting the "table" area
 
