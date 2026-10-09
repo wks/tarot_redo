@@ -162,6 +162,14 @@ Available options are:
 -   Whether to use all cards or Major Arcana only
 -   Enable or disable the "table too large" warning
 
+# Interactions with the original Tarot mod
+
+You can still open the classic reading UI from the Tarot mod,
+using either the `tarot:deck` item or the chat command `/select_reading`.
+To avoid confusion, we renamed the `tarot:deck` item to "Tarot Reading Device",
+and changed the icon to a television screen with tarot cards on it.
+It is now crafted using one Tarot Card (`tarot_redo:tarot_card`) plus Steel Ingots and Glass blocks.
+
 # Authors
 
 Kunshan Wang (wks).

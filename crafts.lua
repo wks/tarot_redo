@@ -88,6 +88,21 @@ core.register_craftitem("tarot_redo:tarot_card", {
 -- crafting
 --
 
+-- Replace the icon for "tarot:deck" to avoid confusion.
+core.override_item("tarot:deck", {
+    description = S("Tarot Reading Device"),
+    _tt_help = table.concat({
+        S("Opens the Tarot reading interface from the original Tarot mod."),
+        S("Note: The UI can also be opened using the '/select_reading' chat command."),
+    }, "\n"),
+    inventory_image = "tarot_redo_reader_ui.png",
+})
+
+-- Clear the original recipe for "tarot:deck" to avoid confusion.
+core.clear_craft({
+    output = "tarot:deck",
+})
+
 function tarot_redo.register_crafts_generic(m)
     core.register_craft({
         output = "tarot_redo:tarot_card 78",
@@ -106,6 +121,16 @@ function tarot_redo.register_crafts_generic(m)
             { "",           m.dye.blue,  m.dye.violet },
         }
     })
+
+    local tc = "tarot_redo:tarot_card"
+    core.register_craft({
+        output = "tarot:deck",
+        recipe = {
+            { m.steel, m.steel, m.steel },
+            { m.glass, tc,      m.glass },
+            { m.steel, m.steel, m.steel },
+        }
+    })
 end
 
 if core.get_modpath("default") and core.get_modpath("dye") then
@@ -121,6 +146,8 @@ if core.get_modpath("default") and core.get_modpath("dye") then
         },
         paper = "default:paper",
         book = "default:book",
+        steel = "default:steel_ingot",
+        glass = "default:glass",
     })
 end
 
@@ -153,6 +180,8 @@ if core.get_modpath("mcl_core") and core.get_modpath("mcl_books") then
             dye = dye,
             paper = "mcl_core:paper",
             book = "mcl_books:book",
+            steel = "mcl_core:iron_ingot",
+            glass = "mcl_core:glass",
         })
     end
 end

@@ -4,6 +4,11 @@ Both are released under the MIT license.
 A copy of the MIT license is provided in LICENSE-MIT.txt
 
 The Tarot Book texture (tarot_redo_tarot_book.png) is modified by Kunshan Wang (wks)
-from the Book item texture (default_book.png) from Minetest Game,
+from the Book item texture from Minetest Game (default_book.png),
 licensed under CC BY-SA 3.0.
 A copy of the CC BY-SA 3.0 license is provided in LICENSE-CC-BY-SA-3.0.txt
+
+The Tarot Reader UI texture (tarot_redo_reader_ui.png) is modified by Kunshan Wang (wks)
+from the Television texture from homedecor (homedecor_television_front.png),
+licensed under CC BY-SA 4.0.
+A copy of the CC BY-SA 4.0 license is provided in LICENSE-CC-BY-SA-4.0.txt
