@@ -7,7 +7,7 @@ core.register_tool("tarot_redo:tarot_book", {
         S("A reference book for Tarot cards."),
         S('Press the dig button (left mouse button) on a surface to highlight "table" area.'),
         S("Press the place button (right mouse button) to open user interface."),
-        S("Note: The UI can also be opened using the '/tarot_ui' chat command."),
+        S("Note: The UI can also be opened using the '/tarot_book' chat command."),
     }, "\n"),
     inventory_image = "tarot_redo_tarot_book.png",
     stack_max = 1,
@@ -49,8 +49,8 @@ core.register_craftitem("tarot_redo:tarot_card", {
         S("Hold this item and dig placed Tarot cards to collect them back."),
         S("Max stack: @1", #tarot_redo.deck),
     }, "\n"),
-    inventory_image = "tarot_redo_card_ico.png",
-    stack_max = #tarot_redo.deck, -- We all know how many cards a Tarot deck has. :)\
+    inventory_image = "card_ico.png",
+    stack_max = #tarot_redo.deck, -- We all know how many cards a Tarot deck has. :)
     groups = {
         book = 1,
     },

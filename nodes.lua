@@ -28,7 +28,7 @@ local card_texture_prefix = string.format(
     card_texture_offset_y
 )
 
-local card_back_image = "tarot_redo_CardBacks.jpg"
+local card_back_image = "CardBacks.jpg"
 
 function tarot_redo.id_to_node_name(card_id)
     return "tarot_redo:tarot_card_" .. card_id

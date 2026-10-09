@@ -19,7 +19,7 @@ dofile(path .. "placement.lua")
 dofile(path .. "nodes.lua")
 dofile(path .. "crafts.lua")
 
-core.register_chatcommand("tarot_ui", {
+core.register_chatcommand("tarot_book", {
     description = S("Open the Tarot Book user interface."),
     func = function(name)
         local player = core.get_player_by_name(name)

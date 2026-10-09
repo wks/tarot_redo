@@ -406,7 +406,7 @@ function tarot_redo.warn_table_too_large(player_name, suppressable)
     local message = S("WARNING: Your table is too large.  The maximum supported size is @1x@2.",
         max_table_size, max_table_size)
     if suppressable then
-        message = message .. S(" (You can suppress this warning in settings. Open with /tarot_ui)")
+        message = message .. S(" (You can suppress this warning in settings. Open with /tarot_book)")
     end
     core.chat_send_player(player_name, message)
 end

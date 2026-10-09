@@ -1,24 +1,15 @@
 # Tarot Redo
 
-This mod adds Tarot Cards in Luanti games.
-Players can craft Tarot Cards, draw cards at random, and place cards on surfaces.
-A Tarot Book item is also provided as a reference manual for the Tarot Cards.
+This mod extends the [Tarot mod] by adding in-world Tarot Cards.
+
+While the original Tarot mod offers a dedicated window in which the player can do Tarot reading,
+this mod makes Tarot Cards into nodes that can be placed in the world.
+Players can craft Tarot Cards, draw cards at random, and place cards on surfaces (tables, walls, etc.).
+
+A Tarot Book item is also provided as a reference manual for the Tarot Cards
+as well as a per-player setting interface.
 
 ![(Screenshot of all cards)](screenshots/screenshot-allcards.webp)
-
-This mod uses the famous Rider-Waite-Smith Tarot deck.
-
-It is a fork of [APercy]'s [Tarot mod].
-The main differences are:
-
--   This mod places Tarot Cards *in the world* as nodes,
-    while the original mod can only use Tarot cards inside a dedicated window.
-    This allows the player to use Tarot Cards as decoration on their walls or tables,
-    or do Tarot readings for other players.
--   This mod lets the player decide where to place the Tarot Cards,
-    while the original mod only supports two pre-defined spreads.
-    This allows the player to use any spreads at their choice,
-    as long as they build a sufficiently large table in the game.
 
 [APercy]: https://content.luanti.org/users/apercy/
 [Tarot mod]: https://content.luanti.org/packages/apercy/tarot/
@@ -146,7 +137,7 @@ That is the area where the mod de-duplicate drawn cards.
 
 Right-click the book to open the Tarot Book UI.
 
-Alternatively, use the chat command `/tarot_ui`.
+Alternatively, use the chat command `/tarot_book`.
 It allows you to open the Tarot Book UI even without a Tarot Book item.
 
 The UI lists all Tarot Cards in the Rider-Waite-Smith deck,
@@ -164,7 +155,7 @@ but also increases the CPU usage when drawing a card.
 ## Per-player settings
 
 There is also a "settings" section in the Tarot Book UI.
-Open it using the Tarot Book item, or the chat command `/tarot_ui`.
+Open it using the Tarot Book item, or the chat command `/tarot_book`.
 Available options are:
 
 -   Whether to use reversed cards
@@ -173,8 +164,6 @@ Available options are:
 
 # Authors
 
-Original mod developed by Alexsandro Percy (APercy).
-
-Maintained by Kunshan Wang (wks).
+Kunshan Wang (wks).
 
 Repository: https://github.com/wks/tarot/
