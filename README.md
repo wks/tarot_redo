@@ -23,7 +23,7 @@ the Tarot Cards (`tarot_redo:tarot_card`) and the Tarot Book (`tarot_redo:tarot_
 If the game supports creative mode (e.g. [Age of Mending] and [Backrooms Test]),
 you can get the items directly from the item list.
 
-If the [Extended Tooltips: Base] mod is installed,
+If the [Extended Tooltips] mod is installed,
 additional tooltips can be displayed for items in this mod.
 
 [Minetest Game]: https://content.luanti.org/packages/Luanti/minetest_game/
@@ -31,7 +31,7 @@ additional tooltips can be displayed for items in this mod.
 [VoxeLibre]: https://content.luanti.org/packages/Wuzzy/mineclone2/
 [Age of Mending]: https://content.luanti.org/packages/Sumianvoice/pmb_core/
 [Backrooms Test]: https://content.luanti.org/packages/Sumianvoice/backroomtest/
-[Extended Tooltips: Base]: https://content.luanti.org/packages/Wuzzy/tt_base/
+[Extended Tooltips]: https://content.luanti.org/packages/Wuzzy/tt/
 
 # How to use
 
