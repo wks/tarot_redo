@@ -186,7 +186,7 @@ function tarot_redo.place_tarot_card(itemstack, player, pointed_thing)
             local should_reverse = math.random(2)
             if should_reverse == 2 then
                 -- Filp the second lowest bit so that it is flipped 180 degrees.
-                facedir = facedir ~ 2
+                facedir = bit.bxor(facedir, 2)
                 if debug then
                     core.debug("Reversed.  facedir:", facedir)
                 end
