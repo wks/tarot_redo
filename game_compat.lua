@@ -1,5 +1,9 @@
 local materials = nil
-local metal_sounds = nil
+local metal_sounds
+local reading_device_groups = {
+    -- This group is known by the Luanti engine, and is used as a fallback for other games.
+    dig_immediate = 2,
+}
 
 if core.get_modpath("default") and core.get_modpath("dye") then
     -- Minetest Game
@@ -19,6 +23,11 @@ if core.get_modpath("default") and core.get_modpath("dye") then
     }
 
     metal_sounds = default.node_sound_metal_defaults()
+
+    reading_device_groups = {
+        oddly_breakable_by_hand = 2,
+        cracky = 2,
+    }
 end
 
 if core.get_modpath("mcl_core") and core.get_modpath("mcl_books") then
@@ -58,7 +67,20 @@ if core.get_modpath("mcl_core") and core.get_modpath("mcl_books") then
     end
 
     metal_sounds = mcl_sounds.node_sound_metal_defaults()
+
+    reading_device_groups = {
+        -- Don't add oddly_breakable_by_hand.
+        -- VoxeLibre interprets its value as handy.
+        -- If it is greater than 1, digging it by hand will not drop it.
+        handy = 1,
+        pickaxey = 1,
+    }
 end
 
 tarot_redo.materials = materials
 tarot_redo.metal_sounds = metal_sounds
+function tarot_redo.popluate_reading_device_groups(groups)
+    for k, v in pairs(reading_device_groups) do
+        groups[k] = v
+    end
+end

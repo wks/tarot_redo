@@ -38,16 +38,11 @@ local reading_device_def = {
     sounds = tarot_redo.metal_sounds,
 
     groups = {
-        -- MTG
-        oddly_breakable_by_hand = 2,
-        cracky = 3,
-        -- MCL
-        handy = 1,
-        pickaxey = 1,
+        -- Populated later.
     },
 
     -- MCL
-    _mcl_hardness = 1,
+    _mcl_hardness = 2,
 
     on_use = function(itemstack, user, pointed_thing)
         open_reading_ui(user)
@@ -56,6 +51,8 @@ local reading_device_def = {
         open_reading_ui(clicker)
     end,
 }
+
+tarot_redo.popluate_reading_device_groups(reading_device_def.groups)
 
 core.register_node("tarot_redo:reading_device", reading_device_def)
 
