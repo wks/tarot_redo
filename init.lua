@@ -11,6 +11,7 @@ tarot_redo.dedup_radius = tonumber(core.settings:get("tarot_redo.dedup_radius"))
 local path = core.get_modpath(modname) .. "/"
 
 dofile(path .. "settings.lua")
+dofile(path .. "game_compat.lua")
 dofile(path .. "utils.lua")
 dofile(path .. "dictionary.lua")
 dofile(path .. "catalog.lua")

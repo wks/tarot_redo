@@ -88,7 +88,11 @@ core.register_craftitem("tarot_redo:tarot_card", {
 -- crafting
 --
 
-function tarot_redo.register_crafts_generic(m)
+local m = tarot_redo.materials
+
+-- m can be nil if the game is unsupported.
+-- Don't register recipies if m is nil.
+if m then
     core.register_craft({
         output = "tarot_redo:tarot_card 78",
         recipe = {
@@ -109,66 +113,13 @@ function tarot_redo.register_crafts_generic(m)
 
     local tc = "tarot_redo:tarot_card"
     core.register_craft({
-        output = "tarot:deck",
+        output = "tarot_redo:reading_device",
         recipe = {
             { m.steel, m.steel, m.steel },
             { m.glass, tc,      m.glass },
             { m.steel, m.steel, m.steel },
         }
     })
-end
-
-if core.get_modpath("default") and core.get_modpath("dye") then
-    -- Minetest Game
-    tarot_redo.register_crafts_generic({
-        dye = {
-            red = "dye:red",
-            yellow = "dye:yellow",
-            green = "dye:green",
-            blue = "dye:blue",
-            violet = "dye:violet",
-            black = "dye:black",
-        },
-        paper = "default:paper",
-        book = "default:book",
-        steel = "default:steel_ingot",
-        glass = "default:glass",
-    })
-end
-
-if core.get_modpath("mcl_core") and core.get_modpath("mcl_books") then
-    -- Mineclonia or VoxeLibre
-    local dye = nil
-    if core.get_modpath("mcl_dyes") then
-        -- Mineclonia
-        dye = {
-            red = "mcl_dyes:red",
-            yellow = "mcl_dyes:yellow",
-            green = "mcl_dyes:green",
-            blue = "mcl_dyes:blue",
-            violet = "mcl_dyes:purple",
-            black = "mcl_dyes:black",
-        }
-    elseif core.get_modpath("mcl_dye") then
-        -- VoxeLibre
-        dye = {
-            red = "mcl_dye:red",
-            yellow = "mcl_dye:yellow",
-            green = "mcl_dye:green",
-            blue = "mcl_dye:blue",
-            violet = "mcl_dye:violet",
-            black = "mcl_dye:black",
-        }
-    end
-    if dye then
-        tarot_redo.register_crafts_generic({
-            dye = dye,
-            paper = "mcl_core:paper",
-            book = "mcl_books:book",
-            steel = "mcl_core:iron_ingot",
-            glass = "mcl_core:glass",
-        })
-    end
 end
 
 -- Concrete cards can be converted back to the abstract Tarot Card.

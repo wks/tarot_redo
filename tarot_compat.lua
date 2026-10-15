@@ -35,6 +35,8 @@ local reading_device_def = {
 
     light_source = core.LIGHT_MAX - 1,
 
+    sounds = tarot_redo.metal_sounds,
+
     groups = {
         -- MTG
         oddly_breakable_by_hand = 2,
@@ -55,19 +57,17 @@ local reading_device_def = {
     end,
 }
 
-if core.get_modpath("default") then
-    reading_device_def.sounds = default.node_sound_metal_defaults()
-elseif core.get_modpath("mcl_sounds") and mcl_sounds then
-    reading_device_def.sounds = mcl_sounds.node_sound_metal_defaults()
-end
-
 core.register_node("tarot_redo:reading_device", reading_device_def)
 
--- core.unregister_item("tarot:deck")
+-- Remove the original "tarot:deck" item.
+-- We can't just create an alias because "tarot:deck" is a tool while "tarot_redo:reading_device" is a node.
+core.unregister_item("tarot:deck")
 
--- Clear the original recipe for "tarot:deck" to avoid confusion.
+-- Clear the original recipe for "tarot:deck",
+-- otherwise the old recipe can still be used for the reading device due to of aliasing.
 core.clear_craft({
     output = "tarot:deck",
 })
 
+-- Existing tarot decks from the tarot mod become reading devices.
 core.register_alias("tarot:deck", "tarot_redo:reading_device")
