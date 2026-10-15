@@ -68,3 +68,21 @@ core.clear_craft({
 
 -- Existing tarot decks from the tarot mod become reading devices.
 core.register_alias("tarot:deck", "tarot_redo:reading_device")
+
+--- Recipies
+
+local m = tarot_redo.materials
+
+-- m can be nil if the game is unsupported.
+-- Don't register recipies if m is nil.
+if m then
+    local tb = "tarot_redo:tarot_book"
+    core.register_craft({
+        output = "tarot_redo:reading_device",
+        recipe = {
+            { m.steel, m.steel, m.steel },
+            { m.glass, tb,      m.glass },
+            { m.steel, m.steel, m.steel },
+        }
+    })
+end

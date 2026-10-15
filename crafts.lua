@@ -110,16 +110,6 @@ if m then
             { "",           m.dye.blue,  m.dye.violet },
         }
     })
-
-    local tc = "tarot_redo:tarot_card"
-    core.register_craft({
-        output = "tarot_redo:reading_device",
-        recipe = {
-            { m.steel, m.steel, m.steel },
-            { m.glass, tc,      m.glass },
-            { m.steel, m.steel, m.steel },
-        }
-    })
 end
 
 -- Concrete cards can be converted back to the abstract Tarot Card.

@@ -169,7 +169,14 @@ To avoid confusion, we removed the `tarot:deck` tool which looks identical to th
 We replaced it with a "Tarot Reading Device" (`tarot_redo:reading_device`), a machine that looks like a television.
 You can open the UI by either holding it in your hand and use it (left-click),
 or place it in the world and right-click it.
-It is now crafted using one Tarot Card (`tarot_redo:tarot_card`) plus Steel Ingots and Glass blocks.
+You can craft the reading device using one Tarot Book (`tarot_redo:tarot_book`) plus Steel Ingots and Glass blocks.
+Note that Steel Ingot is known as Iron Ingot in Mineclonia and VoxeLibre.
+
+```
+Steel Ingot | Steel Ingot | Steel Ingot
+Glass       | Tarot Book  | Glass
+Steel Ingot | Steel Ingot | Steel Ingot
+```
 
 # Authors
 
