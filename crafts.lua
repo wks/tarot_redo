@@ -88,21 +88,6 @@ core.register_craftitem("tarot_redo:tarot_card", {
 -- crafting
 --
 
--- Replace the icon for "tarot:deck" to avoid confusion.
-core.override_item("tarot:deck", {
-    description = S("Tarot Reading Device"),
-    _tt_help = table.concat({
-        S("Opens the Tarot reading interface from the original Tarot mod."),
-        S("Note: The UI can also be opened using the '/select_reading' chat command."),
-    }, "\n"),
-    inventory_image = "tarot_redo_reader_ui.png",
-})
-
--- Clear the original recipe for "tarot:deck" to avoid confusion.
-core.clear_craft({
-    output = "tarot:deck",
-})
-
 function tarot_redo.register_crafts_generic(m)
     core.register_craft({
         output = "tarot_redo:tarot_card 78",

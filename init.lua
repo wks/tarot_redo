@@ -18,6 +18,7 @@ dofile(path .. "forms.lua")
 dofile(path .. "placement.lua")
 dofile(path .. "nodes.lua")
 dofile(path .. "crafts.lua")
+dofile(path .. "tarot_compat.lua")
 
 core.register_chatcommand("tarot_book", {
     description = S("Open the Tarot Book user interface."),
