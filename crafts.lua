@@ -49,7 +49,7 @@ core.register_craftitem("tarot_redo:tarot_card", {
         S("Hold this item and dig placed Tarot cards to collect them back."),
         S("Max stack: @1", #tarot_redo.deck),
     }, "\n"),
-    inventory_image = "card_ico.png",
+    inventory_image = "tarot_card_ico.png",
     stack_max = #tarot_redo.deck, -- We all know how many cards a Tarot deck has. :)
     groups = {
         book = 1,
